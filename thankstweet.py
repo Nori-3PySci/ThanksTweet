@@ -18,9 +18,9 @@ import tweepy
 import datetime
 import random
 
-account = "@account"
-check_days = 7
-n_people = 10
+account = "@account
+check_days = 1
+n_people = 1
 
 time_now = datetime.datetime.now()
 
@@ -87,9 +87,7 @@ def user_tweet(users, time_now, n_people):
         else:
             random_users = random.sample(set(users), n_people)
             tweet_content = '\n\n'.join(random_users)
-        api.update_status("今週もみなさんのリプライとリツイート、ありがとうございます！\n\n" +  tweet_content + "\n\n" + time_now.strftime("%Y/%m/%d %H:%M:%S") + "\n\n#リプRT感謝砲") 
-    elif len(users) == 0:
-        api.update_status("今週は残念ながら、リプライもリツイートもありませんでした..." + "\n\n" + time_now.strftime("%Y/%m/%d %H:%M:%S") + "\n\n#リプRT感謝砲")
+        api.update_status("今日、リプライやリツイートをくれたアクティブな方を紹介！\n\n" +  tweet_content + "\n\nありがとうございました！\n\n" + time_now.strftime("%Y/%m/%d %H:%M:%S") + "\n\n#リプRT感謝砲") 
 
 
 def main(account, check_days, time_now, n_people):
