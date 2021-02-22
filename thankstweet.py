@@ -18,7 +18,7 @@ import tweepy
 import datetime
 import random
 
-account = "@account
+account = "@account"
 check_days = 1
 n_people = 1
 
